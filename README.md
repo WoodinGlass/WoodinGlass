@@ -124,38 +124,6 @@
 
 <div align="center">
 
-- **Deterministic core** — idempotent ingestion on `sha256(content) + chunker_version`; re-ingest is a no-op
-- **Structured output** — `AgentOutput` enforced via Pydantic v2 (`extra="forbid"`); invalid LLM output hard-fails with a correlation id
-- **Two agent backends** — state machine (default) + LangGraph, behind one `AgentBackend` protocol, parity-tested
-- **Three vector stores** — Memory / Chroma / Qdrant behind one `VectorStore` ABC, selected by env
-- **Provider-agnostic LLM** — OpenAI / Anthropic / Groq (OpenAI-compatible); real-path smoke test runs on every weekly cron
-- **Streaming ingestion** — `EventSource` protocol with memory / Kafka / S3 adapters, at-least-once + bounded dedup, parallel partitions with consumer-group rebalance hooks
-- **Observability** — structured JSON logs, `/metrics` (JSON) + `/metrics/prom` (Prometheus), OpenTelemetry traces (opt-in)
-- **Opt-in multi-tenant + limits** — API-key auth with tenant-scoped doc ids; token-bucket rate limit + body size cap
-- **Evaluation** — offline retrieval metrics on every PR; Ragas via LLM judge on weekly/manual runs
-- **Benchmarks** — 12-doc baseline + 1k-doc synthetic scale; reranker delta with real cross-encoder
-- **CI** — lint + type + coverage (`fail_under=89`, ~92% total) + docker smoke + provider smoke (Groq free tier)
-- **Docs** — architecture, runbooks, exactly-once, kafka-rebalance, provider-smoke, limitations, portfolio-notes
-
-</div>
-
-<h3 align="center">🧮 math-render-pipeline</h3>
-
-<p align="center"><em>Not "math art". A <strong>pipeline</strong> whose payload happens to be math art.</em></p>
-
-<div align="center">
-
-- **Deterministic** — `formula_hash = sha256(spec)` ⇒ byte-identical PNGs
-- **Four formulas** — polar harmonics · Cartesian harmonics · moiré interference · damped Lissajous
-- **Batch + streaming** — Airflow DAG + Kafka/Redpanda consumer, idempotent on `render_id` with DLQ
-- **Data quality** — schema + freshness + volume + integrity tiers; GE-style suite
-- **Observability** — JSON logs with `correlation_id`, Prometheus `/metrics`, OpenTelemetry spans, Grafana alerts, 5 runbooks
-- **Lineage** — OpenLineage events viewable in Marquez (best-effort, no-op when unset)
-- **Benchmarked** — batch/streaming/scale/backfill + cost model ($ per 1000 renders)
-- **Multi-cloud IaC** — Terraform for AWS (S3 + RDS) and GCP (GCS + Cloud SQL)
-- **Spot batch** — AWS Batch SPOT compute env, ~70% cheaper than on-demand
-- **Live demo** — [math-render-pipeline.streamlit.app](https://math-render-pipeline-3kvjtr8gsh8rtpxsg4fwtc.streamlit.app)
-
 </div>
 
 <p align="center">
