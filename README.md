@@ -116,13 +116,6 @@
 
 </div>
 
-<h2 align="center">⭐ Featured</h2>
-
-<h3 align="center">🤖 rag-agent-platform</h3>
-
-<p align="center"><em>A <strong>production-minded backend</strong> whose payload happens to be RAG + agents.</em></p>
-
-<div align="center">
 
 </div>
 
