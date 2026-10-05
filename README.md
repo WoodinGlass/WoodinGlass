@@ -1,8 +1,8 @@
 <h3 align="center">ML Infrastructure, Data Engineering & AI Systems</h3>
 
 <p align="center">
-  Building <strong>differentiable pipelines</strong>, <strong>deterministic ETL</strong>, and <strong>production-minded RAG/agent backends</strong>.<br>
-  Mathematical transforms · Physics-based distortion · Streaming · PyTorch · Retrieval · Agents · Reproducible ML
+  Building <strong>differentiable pipelines</strong>, <strong>deterministic ETL</strong>, and <strong>leakage-free ML systems</strong>.<br>
+  Mathematical transforms · Physics-based distortion · Streaming · PyTorch · Retrieval · Agents · Point-in-time backtests
 </p>
 
 <p align="center">
@@ -11,6 +11,9 @@
   </a>
   <a href="https://github.com/WoodinGlass/math-render-pipeline">
     <img src="https://img.shields.io/badge/🧮_math--render--pipeline-0a1410?style=for-the-badge&logo=github&logoColor=e8e0d5" alt="Math Render Pipeline"/>
+  </a>
+  <a href="https://github.com/WoodinGlass/data-backtest-pipeline">
+    <img src="https://img.shields.io/badge/📊_data--backtest--pipeline-0a1410?style=for-the-badge&logo=github&logoColor=e8e0d5" alt="Data Backtest Pipeline"/>
   </a>
   <a href="https://github.com/WoodinGlass/distortion-library">
     <img src="https://img.shields.io/badge/🦴_distortion--library-0a1410?style=for-the-badge&logo=github&logoColor=e8e0d5" alt="Distortion Library"/>
@@ -26,7 +29,7 @@
 
 <p align="center">
   <strong>Production-grade pipelines where math, ML, data engineering, and AI meet.</strong><br>
-  Deterministic rendering · Physics-based distortion · RAG + agent backends · Batch + streaming ETL · Observability · Tested.
+  Deterministic rendering · Physics-based distortion · RAG + agent backends · Leakage-free backtests · Batch + streaming ETL · Observability · Tested.
 </p>
 
 <div align="center">
@@ -35,6 +38,7 @@
 |---|---|---|
 | [rag-agent-platform](https://github.com/WoodinGlass/rag-agent-platform) | Production-minded RAG + AI agent backend. Tool-calling, structured JSON output, streaming ingestion, evaluation, benchmarks, full CI. Runs offline by default. | FastAPI, Pydantic, LangGraph, Qdrant, OpenTelemetry, Docker |
 | [math-render-pipeline](https://github.com/WoodinGlass/math-render-pipeline) | Deterministic math → PNG + structured metadata. Batch + streaming, observability, multi-cloud IaC, benchmarks. Live demo. | NumPy, Airflow, dbt, Kafka, Postgres, Grafana, Terraform, Streamlit |
+| [data-backtest-pipeline](https://github.com/WoodinGlass/data-backtest-pipeline) | Reproducible, leakage-free pipeline for daily US equity direction. Point-in-time features, vintage-aware macro, filing-date PIT fundamentals, walk-forward backtest with deflated Sharpe, MLflow tracking, Prefect orchestration, Docker, monitoring. **20 ADRs, ~600 tests.** [Live synthetic demo →](https://data-backtest-pipeline.streamlit.app/) | dbt, DuckDB, Pydantic, scikit-learn, MLflow, Prefect, Docker, Streamlit |
 | [distortion-library](https://github.com/WoodinGlass/distortion-library) | Physics-based image degradation for CV robustness. Differentiable, reproducible. | PyTorch |
 
 </div>
@@ -75,8 +79,10 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"/>
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikitlearn&logoColor=white" alt="scikit-learn"/>
   <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/>
   <img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="pandas"/>
 </p>
 
 <p align="center"><strong>Data Engineering</strong></p>
@@ -84,10 +90,20 @@
 <p align="center">
   <img src="https://img.shields.io/badge/Airflow-017CEE?style=flat-square&logo=apacheairflow&logoColor=white" alt="Airflow"/>
   <img src="https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white" alt="dbt"/>
+  <img src="https://img.shields.io/badge/DuckDB-FFF000?style=flat-square&logo=duckdb&logoColor=black" alt="DuckDB"/>
   <img src="https://img.shields.io/badge/Kafka-231F20?style=flat-square&logo=apachekafka&logoColor=white" alt="Kafka"/>
   <img src="https://img.shields.io/badge/Postgres-4169E1?style=flat-square&logo=postgresql&logoColor=white" alt="Postgres"/>
   <img src="https://img.shields.io/badge/Parquet-50ABF1?style=flat-square&logo=apacheparquet&logoColor=white" alt="Parquet"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+</p>
+
+<p align="center"><strong>ML Platforms</strong></p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/MLflow-0194E2?style=flat-square&logo=mlflow&logoColor=white" alt="MLflow"/>
+  <img src="https://img.shields.io/badge/Prefect-070E10?style=flat-square&logo=prefect&logoColor=white" alt="Prefect"/>
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"/>
+  <img src="https://img.shields.io/badge/Pandera-3B5BDB?style=flat-square&logoColor=white" alt="Pandera"/>
 </p>
 
 <p align="center"><strong>Observability</strong></p>
@@ -116,9 +132,6 @@
 
 </div>
 
-
-</div>
-
 <p align="center">
-  <sub>🧠 Built with rigor. 🧮 Shipped as data. 🌿 Explored for fun. 🦴</sub>
+  <sub>🧠 Built with rigor. 🧮 Shipped as data. 📊 Measured honestly. 🌿 Explored for fun.</sub>
 </p>
